@@ -1,0 +1,553 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'Geologica', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&family');
+}
+
+
+/* ---------------header -------------------*/
+
+body{
+    background-color: #EEEEE1;
+    font-family: 'Geologica', sans-serif;
+
+    width: 1920px;
+}
+
+.outer{
+    background-color: #BBD94E;
+    display: flex;
+    border-radius: 0px 0px 50px 50px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    width: 1920px;
+    height: 120px;
+}
+
+
+/* Download App button */
+/* .downloadbtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 80px;
+    height: 50%;
+    min-width: 210px;
+} */
+
+
+.downloadbtn {
+    background-color:#025949; /* Green */
+    border: none;
+    color: #EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: Geologica;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 80px;
+    height: 50%;
+    min-width: 210px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .downloadbtn:hover {
+    background-color: #EEEEE1;
+    color:#025949;
+    font-weight:500;
+  }
+
+/* Nav Items */
+
+header ul{
+    color: #025949;
+    display: flex;
+}
+
+
+header li{
+    margin-left: 58px;
+    margin-top: 50px;
+}
+
+header a{
+    text-decoration: none;
+    color:#025949;
+}
+
+header li a:hover {
+    color: #025949;
+    text-decoration: underline;
+}
+
+
+.headerlogo{
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+/* -----------Switch Function -------------*/
+
+/* * {
+    box-sizing: border-box;
+} */
+
+:root {
+    --switches-bg-color: #025949;
+    --switches-label-color: #EEEEE1;
+    --switch-bg-color: #EEEEE1;
+    --switch-text-color: #025949 ;
+}
+
+
+/* resize font-size on html and body level. html is required for widths based on rem */
+@media screen and (min-width: 1024px) {
+
+    html,
+    body {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+
+/* container for all of the switch elements 
+    - adjust "width" to fit the content accordingly 
+*/
+.switches-container {
+    width: 13rem;
+    height: 70px;
+    position: relative;
+    display: flex;
+    padding: 0;
+    position: relative;
+    background: var(--switches-bg-color);
+    line-height: 3rem;
+    border-radius: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    color: var(--switches-label-color);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    padding: 0.15rem;
+    z-index: 3;
+    transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+    /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+    border-radius: 3rem;
+    background: var(--switch-bg-color);
+    height: 100%;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    display: block;
+    color: var(--switch-text-color) ;
+    transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+    will-change: opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+    transform: translateX(1%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+    transform: translateX(91%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+    opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+    opacity: 1;
+}
+
+
+/* -----------Section 1 -----------*/
+
+.sectionOneTitle{
+    display: block;
+    margin: 80px auto 0;
+}
+
+
+.sectionOneOuter{
+    width: 1590px;
+    height: 807px;
+}
+
+.content{
+    background-color: #BBD94E;
+    border-radius: 20px;
+
+    width: 688px;
+    height: 406px;
+
+    position: absolute;
+    right: 180px;
+    top: 700px;
+}
+
+
+.sectionOneOuter img{
+    width: 950px;
+    height: 807px;
+
+    margin-left: 165px;
+}
+
+
+.sectionOneOuter h2{
+    font-size: 28px;
+    font-weight: bold;
+    color: #025949;
+
+    margin-top: 20px;
+    margin-left: 100px;
+    line-height: 1.2em;
+}
+
+#tabone{
+    background-color:#025949;
+    color:#EEEEE1;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50px;
+    width: 104px;
+    height: 28px;
+    line-height: 2.2em;
+
+    margin-top: 60px;
+}
+
+.sectionOneOuter p{
+    font-size: 16px;
+    color: #025949;
+    
+    margin-left: 100px;
+    line-height: 1.5em;
+}
+
+
+.sectionOneOuter .readmorebtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 100px;
+    height: 58px;
+    min-width: 210px;
+
+        transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+::placeholder{
+    color:#BBD94E;
+    font-family: Verdana;
+  }
+  
+  .readmorebtn:hover {
+    background-color: #EEEEE1;
+    color:#025949;
+    font-weight:500;
+  }
+  
+
+
+/* -----------------Section 2----------------- */
+
+
+.sectionTwoOuter{
+    width: 1920px;
+}
+
+
+.sectionTwoTitle{
+    display: block;
+    margin: 50px auto 0;
+}
+
+
+.blogposts{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: center;
+}
+
+.blogposts li{
+    background-color:#BBD94E;
+    border-radius: 30px;
+    width: 560px;
+    height: 700px;
+
+    box-sizing: border-box;
+    margin: 0 50px 100px;
+
+}
+
+.blogposts img{
+    width: 560px;
+    height: 560px;
+
+    display: block;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.blogposts p{
+    background-color:#025949;
+    color: #EEEEE1;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50px;
+    width: 104px;
+    height: 28px;
+    line-height: 2.3em;
+
+    margin-left: 50px;
+    margin-top: 20px;
+
+
+}
+
+.blogposts h2{
+    font-size: 22px;
+    color: #025949;
+    font-weight: bold;
+
+    margin-top: 10px;
+    margin-left: 50px;
+    line-height: 1.2em;
+}
+
+
+/* ---------Section 3 (newsletters) ---------*/
+
+.sectionThreeOuter{
+    background-color: #025949;
+    border-radius: 20px;
+    width: 1000px;
+    height: 280px;
+    padding: 100px 100px;
+
+    margin: 0 auto;
+}
+
+.sectionThreeOuter h1{
+    color: #BBD94E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.sectionThreeOuter h2{
+    color: #BBD94E;
+    font-size: 20px;
+    line-height: 1.2em;
+
+    margin-bottom: 20px;
+}
+
+.sectionThreeOuter form{
+    width: 400px;
+    height: 180px;
+}
+
+#inputboxes{
+    width: 400px;
+}
+
+
+input[type=text]{
+    background-color:#BBD94E;
+    color:#025949;
+
+    width: 370px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #EEEEE1;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  input[type=number]{
+    background-color:#BBD94E;
+    color:#025949;
+
+    width: 370px;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #EEEEE1;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=submit] {
+    width: 180px;
+    background-color:#BBD94E;
+    color:#025949;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  ::placeholder{
+    color:#025949;
+    font-family: Verdana;
+  }
+  
+  input[type=submit]:hover {
+    color:#025949;
+    font-weight: bold;
+    background-color: #EEEEE1;
+  }
+  
+  .sectionThreeOuter p{
+    color: #BBD94E;
+    font-size: 16px;
+  }
+
+  .sectionThreeOuter img{
+    width: 250px;
+    height: 250px;
+
+    float: right;
+  }
+
+
+  /* ------------------Footer------------------- */
+
+.footer{
+    background-color: #BBD94E;
+    border-radius: 50px 50px 0px 0px;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 1920px;
+    height: 120px;
+
+    margin-top: 100px;
+    padding-top: 30px;
+
+}
+
+.appstore{
+
+}
+
+.appstore img{
+    margin-top: 30px;
+
+}
+
+.kindfoodlogo img{
+    display: block;
+    margin: 0 auto;
+
+}
+
+.kindfoodlogo p{
+    font-size: 12px;
+    color: #025949;
+    text-align: center;
+
+}
+
+.socialmedia img{
+
+}

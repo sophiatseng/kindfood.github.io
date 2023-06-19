@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kind Food Blog</title>
+    <link rel="stylesheet" href="/css/blog.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200&family" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!------------------- Header --------------------->
+
+    <header class="outer">
+
+
+      <a href="download.html"> 
+        <button class="downloadbtn">Download App</button>
+      </a> 
+
+        <nav>
+         <ul>
+             <li><a href="location.html">Location</a></li>
+             <li><a href="blog.html">Blog</a></li>
+             <li><a href="faq.html">FAQs</a></li>
+         </ul>
+        </nav>
+
+        <div class="headerlogo">
+            <a href="index.html">
+              <img src="img/KindFood_logo.svg" alt="">
+            </a>
+        </div>
+
+            <div class="switches-container">
+              <input type="radio" id="switchUser" name="switchName" value="User" checked="checked" />
+              <input type="radio" id="switchBusiness" name="switchName" value="Business" />
+              <label for="switchUser">User</label>
+              <label for="switchBusiness">Business</label>
+              <div class="switch-wrapper">
+                <div class="switch">
+                  <div>User</div>
+                  <div>Business</div>
+                </div>
+              </div>
+
+          </div>
+        
+        </div>
+    </header>
+
+    <!------------ Section 1 (blog of the month)------------->
+
+    <img src="/img/title01.svg" alt="" class="sectionOneTitle">
+    
+    <div class="sectionOneOuter">
+      <img src="/img/blog_pic01.png" alt="">
+      
+        <div class="content">
+        <p id="tabone">Recipes</p>
+        <h2>Transforming Leftovers into <br> Delicious Meals</h2>
+        
+        <p>Don't let leftovers go to waste! Unleash your culinary<br> creativity with these mouthwatering recipes that repurpose<br> and transform surplus ingredients into new, exciting dishes.<br> Waste not, want not!</p>
+
+        <button onclick="href='#';" class="readmorebtn">Read More</button>
+        </div>
+    </div>
+
+
+      <!------------- Section 2 (featured blogs)------------->
+
+
+      <div class="sectionTwoOuter">
+
+        <img src="/img/title02.svg" alt="" class="sectionTwoTitle">
+
+        <ul class="blogposts">
+          
+          <li>
+            <img src="/img/blog_pic02.png" alt="">
+            <p>Food Waste</p>
+            <h2>Healthy Eating on a Budget: <br> 
+              Nourishing Yourself and Reducing Waste</h2>
+          </li>
+
+
+          <li>
+            <img src="/img/blog_pic03.png" alt="">
+            <p>Community</p>
+            <h2>The Power of Community: <br>
+              Sharing Food for a Sustainable Future</h2>
+          </li>
+
+
+          <li>
+            <img src="/img/blog_pic04.png" alt="">
+            <p>Health Tips</p>
+            <h2>The Green Powerhouse: Unveiling the <br>
+              Incredible Benefits of Avocado</h2>
+          </li>
+
+          
+          <li>
+            <img src="/img/blog_pic05.png" alt="">
+            <p>Health Tips</p>
+            <h2>Hydration Hero: The Incredible <br>
+              Benefits of Drinking Water</h2>
+          </li>
+
+          <li>
+            <img src="/img/blog_pic06.png" alt="">
+            <p>Environment</p>
+            <h2>Eco Bottles: Sip Sustainably and <br>
+              Reduce Plastic Waste</h2>
+          </li>
+
+          <li>
+            <img src="/img/blog_pic07.png" alt="">
+            <p>Environment</p>
+            <h2>Green Thumb Guide: Essential Tips for <br>
+              Successful Plant Care and Maintenance</h2>
+          </li>
+        </ul>
+
+
+        <!------------- Section 3 (newsletters) ---------------->
+
+        <div class="sectionThreeOuter">
+
+          <img src="/img/newsletter_logo.svg" alt="">
+          
+          <h1>If you made it this far...</h1>
+          <h2>Something tells us you would appreciate our news letters.</h2>
+
+          <form id="inputboxes" action="/action_page.php">
+            <!-- <label for="fname">First Name</label> -->
+            <input type="text" id="email" name="emailaddress" placeholder="Your Email Address">
+
+            <!-- <label for="lname">Last Name</label> -->
+            <input type="text" id="zcode" name="zipcode" placeholder="Your Zip Code">
+          
+            <input type="submit" value="Submit">
+          </form>
+
+          <p>By submitting, you agree to our Terms of Service and Privacy Policy.</p>
+  
+
+        </div>
+
+        <!--------------------- Footer ---------------------->
+
+
+        <footer class="footer">
+
+          <div class="appstore">
+              <img src="/img/appStore.png" alt="">
+              <img src="/img/googlePlay.png" alt="">
+          </div>
+  
+          <div class="kindfoodlogo">
+              <img src="/img/KindFood_logo.svg" alt="">
+              <p>本網站為緯育TibaMe前端工程師班第102期學員專題作品，本平台僅供學習、展示之用。</p>
+          </div>
+  
+          <div class="socialmedia">
+              <img src="/img/socialMedia.png" alt="">
+          </div>
+  
+      </footer>
+
+
+
+
+
+
+
+    </div>
+    
+
+</body>
+</html>

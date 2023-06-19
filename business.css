@@ -1,0 +1,827 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'Geologica', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&family');
+}
+
+
+/* ---------------Header -------------------*/
+
+body{
+    background-color: #EEEEE1;
+    font-family: 'Geologica', sans-serif;
+
+    width: 1920px;
+}
+
+.outer{
+    background-color: #BBD94E;
+    display: flex;
+    border-radius: 0px 0px 50px 50px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    width: 1920px;
+    height: 120px;
+}
+
+
+/* Download App button */
+/* .downloadbtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 80px;
+    height: 50%;
+    min-width: 210px;
+} */
+
+
+.downloadbtn {
+    background-color:#025949; /* Green */
+    border: none;
+    color: #EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: Geologica;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 80px;
+    height: 50%;
+    min-width: 210px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .downloadbtn:hover {
+    background-color: #EEEEE1;
+    color:#025949;
+    font-weight:500;
+  }
+
+/* Nav Items */
+
+header ul{
+    color: #025949;
+    display: flex;
+}
+
+
+header li{
+    margin-left: 58px;
+    margin-top: 50px;
+}
+
+header a{
+    text-decoration: none;
+    color:#025949;
+}
+
+header li a:hover {
+    color: #025949;
+    text-decoration: underline;
+  }
+
+
+.headerlogo{
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+/* -----------Switch Function -------------*/
+
+/* * {
+    box-sizing: border-box;
+} */
+
+:root {
+    --switches-bg-color: #025949;
+    --switches-label-color: #EEEEE1;
+    --switch-bg-color: #EEEEE1;
+    --switch-text-color: #025949 ;
+}
+
+
+/* resize font-size on html and body level. html is required for widths based on rem */
+@media screen and (min-width: 1024px) {
+
+    html,
+    body {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+
+/* container for all of the switch elements 
+    - adjust "width" to fit the content accordingly 
+*/
+.switches-container {
+    width: 13rem;
+    height: 70px;
+    position: relative;
+    display: flex;
+    padding: 0;
+    position: relative;
+    background: var(--switches-bg-color);
+    line-height: 3rem;
+    border-radius: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    color: var(--switches-label-color);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    padding: 0.15rem;
+    z-index: 3;
+    transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+    /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+    border-radius: 3rem;
+    background: var(--switch-bg-color);
+    height: 100%;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    display: block;
+    color: var(--switch-text-color) ;
+    transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+    will-change: opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+    transform: translateX(1%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+    transform: translateX(91%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+    opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+    opacity: 1;
+}
+
+
+/* ---------------Section 1-------------- */
+
+.sectionOneOuter{
+    width: 1920px;
+    margin-top: 200px;
+    margin-left: 224px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* -------------Content Left------------- */
+
+.contentleft{
+
+}
+
+.contentleft h1{
+    color:#025949;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.5em;
+
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#revenue{
+    display:block;
+    margin: 0 auto;
+
+}
+
+.contentleft p{
+    color:#025949;
+    font-weight: 600;
+    margin-top: 30px;
+
+    text-align: center;
+
+}
+
+#cook{
+    margin-top: 30px;
+
+}
+
+/* -------------Content Right------------- */
+
+.contentright{
+    width: 590px;
+    height: 680px;
+    margin-left: 120px;
+
+    background-color:#BBD94E;
+    border-radius: 30px;
+}
+
+.contentright h3{
+    color:#025949;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4em;
+    
+    margin: 96px 88px 40px;
+}
+
+.contentright form{
+
+}
+
+#inputboxes{
+    width: 360px;
+
+    margin-left: 100px;
+}
+
+
+input[type=text]{
+    background-color:#025949;
+    color:#BBD94E;
+
+    width: 370px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #EEEEE1;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  input[type=number]{
+    background-color:#BBD94E;
+    color:#025949;
+
+    width: 370px;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #EEEEE1;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=register] {
+    width: 100px;
+    background-color:#025949;
+    color:#EEEEE1;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 14px 20px;
+    margin: 30px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  ::placeholder{
+    color:#BBD94E;
+    font-family: Verdana;
+  }
+  
+  input[type=register]:hover {
+    color:#025949;
+    font-weight: bold;
+    background-color: #EEEEE1;
+  }
+
+
+  /* -------------Section 2--------------- */
+
+
+  .sectionTwoOuter{
+    min-width: 1920px;
+
+    margin-left: 44px;
+    margin-top: 86px;
+  }
+
+  #biztitleone{
+
+    width: 1920px;
+    height: 320px;
+  }
+
+  .sectionTwoOuter ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-left: 80px;
+  }
+
+  .sectionTwoOuter li{
+    text-align: center;
+    margin-right: 100px;
+
+  }
+
+  .sectionTwoOuter img{
+    width: 220px;
+    height: 220px;
+  }
+
+  .sectionTwoOuter h1{
+    font-size: 32px;
+    font-weight: bold;
+    color: #025949;
+    margin-top: 10px;
+
+  }
+
+  .sectionTwoOuter p{
+    margin-top: 5px;
+    font-size: 18px;
+    color:#025949;
+    font-weight: bold;
+  }
+
+  input[type=registermybiz] {
+    width: 160px;
+    background-color:#025949;
+    color:#EEEEE1;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 14px 20px;
+    margin: 30px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    display: block;
+    margin: 80px auto;
+  }
+
+  ::placeholder{
+    color:#BBD94E;
+    font-family: Verdana;
+  }
+  
+  input[type=registermybiz]:hover {
+    color:#025949;
+    font-weight: bold;
+    background-color:#BBD94E;
+  }
+
+
+/* ------------Some of our partners (logos)----------- */
+
+.logos{
+    width: 1920px;
+    display:flex;
+    flex-direction: row;
+}
+
+
+#logotitle{
+    text-align: center;
+    color:#025949;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    margin-left: 52px;
+
+    width: 1920px;
+}
+
+.logos img{
+    margin-right: 24px;
+}
+
+/* ---------Section 3 (How It Works? -Steps)----------- */
+
+.sectionThreeTitle{
+    width: 1920px;
+    height: 340px;
+
+    margin-left: 60px;
+}
+
+.steps{
+    width: 1920px;
+}
+
+/* --------------Step 1------------- */
+
+.stepOne{
+    background-color: #025949;
+    width: 1200px;
+    height: 360px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 380px;
+}
+
+#pic{
+    width: 332px;
+    height: 535px;
+
+    position: absolute;
+    left: 1240px;
+    top: 2640px;
+}
+
+#number{
+    position: absolute;
+    left: 440px;
+    top: 2720px;
+}
+
+
+.stepOne h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#BBD94E;
+    text-align: left;
+    padding-left: 320px;
+    
+    padding-top: 120px;
+
+}
+
+.stepOne h2{
+    font-size: 22px;
+    font-weight: bold;
+    color: #BBD94E;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.stepOne p{
+    font-size: 16px;
+    color: #BBD94E;
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 320px;
+}
+
+
+
+/* ---------------------Step 2------------------- */
+
+.stepTwo{
+    background-color:#BBD94E;
+    width: 1200px;
+    height: 360px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 380px;
+    margin-top: 120px;
+}
+
+#pictwo{
+    width: 540px;
+    height: 499px;
+
+    position: absolute;
+    left: 200px;
+    top: 3152px;
+}
+
+#numbertwo{
+    position: absolute;
+    left: 1440px;
+    top: 3200px;
+}
+
+.stepTwo h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#025949;
+    text-align: left;
+    
+    padding-top: 120px;
+    padding-left: 450px;
+}
+
+.stepTwo h2{
+    font-size: 22px;
+    font-weight: bold;
+    color:#025949;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stepTwo p{
+    font-size: 16px;
+    color:#025949;
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 450px;
+}
+
+
+
+/* ---------------------Step 3------------------- */
+
+.stepThree{
+    background-color: #025949;
+    width: 1200px;
+    height: 360px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 380px;
+    margin-top: 120px;
+
+}
+
+#picthree {
+    width: 626px;
+    height: 467px;
+
+    position: absolute;
+    left: 1100px;
+    top: 3668px;
+}
+
+#numberthree{
+    position: absolute;
+    left: 440px;
+    top: 3670px;
+}
+
+.stepThree h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#BBD94E;
+    text-align: left;
+    line-height: 1.2em;
+    padding-top: 60px;
+    padding-left: 200px;
+
+}
+
+.stepThree h2{
+    font-size: 22px;
+    font-weight: bold;
+    color: #BBD94E;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.stepThree p{
+    font-size: 16px;
+    color: #BBD94E;
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 200px;
+}
+
+/* Partner Comments - What our partners are saying */
+
+.commentsOuter{
+
+}
+
+#biztitle{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.commentsContent{
+}
+
+.commentsContent ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.commentsContent li{
+    background-color:#025949;
+    margin-right: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+    width: 280px;
+    height: 466px;
+    border-radius: 20px;
+}
+
+.commentsContent img{
+    width: 166px;
+    height: 203px;
+
+    display: block;
+    margin-left: 84px;
+    margin-top: -50px;
+
+}
+
+.commentsContent p{
+    font-size: 17px;
+    color: #BBD94E;
+    line-height: 1.2em;
+    text-align: left;
+
+}
+
+.commentsContent h4{
+    font-size: 22px;
+    color: #BBD94E;
+    text-align: center;
+
+    margin-top: 36px;
+    margin-bottom: 10px;
+}
+
+.commentsContent h5{
+    font-size: 16px;
+    font-weight: bold;
+    color: #BBD94E;
+    text-align: center;
+
+}
+
+.commentsOuter input{
+    display: block;
+    margin: 40px auto;
+}
+
+input[type=registernow] {
+    width: 120px;
+    background-color:#025949;
+    color:#EEEEE1;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 14px 20px;
+    margin: 30px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    display: block;
+    margin: 80px auto;
+  }
+
+  ::placeholder{
+    color:#BBD94E;
+    font-family: Verdana;
+  }
+  
+  input[type=registernow]:hover {
+    color:#025949;
+    font-weight: bold;
+    background-color:#BBD94E;
+  }
+  
+
+/* -----------Footer------------ */
+
+.footer{
+    background-color: #BBD94E;
+    border-radius: 50px 50px 0px 0px;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 1920px;
+    height: 120px;
+
+    margin-top: 100px;
+    padding-top: 30px;
+}
+
+.appstore{
+
+}
+
+.appstore img{
+    margin-top: 30px;
+
+}
+
+.kindfoodlogo img{
+    display: block;
+    margin: 0 auto;
+
+}
+
+.kindfoodlogo p{
+    font-size: 12px;
+    color: #025949;
+    text-align: center;
+
+}
+
+.socialmedia img{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

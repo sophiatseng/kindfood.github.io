@@ -1,0 +1,136 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'Geologica', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&family');
+}
+
+body{
+    background-color: #EEEEE1;
+    font-family: 'Geologica', sans-serif;
+
+    width: 1920px;
+    height: 100%;
+}
+
+
+.mystoreOuter{
+    height: 100vh;
+    display: flex;
+}
+
+.leftOuter{
+    background-color:#025949;
+    width: 40%;
+
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.leftContent h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #BBD94E;
+    line-height: 2em;
+}
+
+.leftContent img{
+
+}
+
+.rightOuter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rightContent{
+
+}
+
+.rightContent h3{
+    font-size: 20px;
+    color: #025949;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rightContent a{
+    text-align: right;
+    text-decoration: none;
+    color: #025949;
+    margin-top: 10px;
+}
+
+
+#inputboxes{
+    width: 400px;
+    margin-left: 400px;
+
+    justify-content: center;
+}
+
+
+input[type=text]{
+    background-color:#BBD94E;
+    color:#025949;
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #EEEEE1;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  input[type=number]{
+    background-color:#BBD94E;
+    color:#025949;
+
+    width: 370px;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #EEEEE1;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=login] {
+    width: 100px;
+    background-color:#025949;
+    color:#EEEEE1;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 14px 20px;
+    margin-top: 40px;
+    margin-left: 126px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  ::placeholder{
+    color:#025949;
+    font-family: Verdana;
+  }
+  
+  input[type=login]:hover {
+    color:#025949;
+    font-weight: bold;
+    background-color:#BBD94E;
+  }
+
+
+
+

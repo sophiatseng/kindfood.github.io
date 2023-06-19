@@ -1,0 +1,74 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'Geologica', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&family');
+}
+
+/* ---------------Header -------------------*/
+
+
+body{
+    background-color: #EEEEE1;
+    font-family: 'Geologica', sans-serif;
+
+    width: 1920px;
+    height: 100%;
+}
+
+.downloadOuter{
+    background-repeat: no-repeat;
+    background-color: #05050580;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.popupOuter{
+    align-items: flex-start;
+    background-color: #f9f3f0;
+    border-radius: 20px;
+    display: flex;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popupContent{
+    display: flex;
+    padding-right: 20px;
+    padding-left: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.popupContent h2{
+    color: #025949;
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 42px;
+    margin-top: 20px;
+    line-height: 1.3em;
+}
+
+.popupContent img{
+
+}
+
+.closebtn{
+    border: none;
+    margin: 1.5em;
+    cursor: pointer;
+}
+
+#closeIcon{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+

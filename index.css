@@ -1,0 +1,767 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'Geologica', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&family');
+}
+
+/* ---------------Header -------------------*/
+
+body{
+    background-color: #EEEEE1;
+    font-family: 'Geologica', sans-serif;
+
+    width: 1920px;
+}
+
+.outer{
+    background-color: #BBD94E;
+    display: flex;
+    border-radius: 0px 0px 50px 50px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    width: 1920px;
+    height: 120px;
+}
+
+
+/* Download App button */
+/* .downloadbtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 80px;
+    height: 50%;
+    min-width: 210px;
+} */
+
+
+.downloadbtn {
+    background-color:#025949; /* Green */
+    border: none;
+    color: #EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: Geologica;
+    margin: 30px 2px;
+    border-radius: 50px;
+    margin-left: 80px;
+    height: 50%;
+    min-width: 210px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .downloadbtn:hover {
+    background-color: #EEEEE1;
+    color:#025949;
+    font-weight:500;
+  }
+
+/* Nav Items */
+
+header ul{
+    color: #025949;
+    display: flex;
+}
+
+
+header li{
+    margin-left: 58px;
+    margin-top: 50px;
+}
+
+header a{
+    text-decoration: none;
+    color:#025949;
+}
+
+header li a:hover {
+    color: #025949;
+    text-decoration: underline;
+  }
+
+.headerlogo{
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+/* -----------Switch Function -------------*/
+
+/* * {
+    box-sizing: border-box;
+} */
+
+:root {
+    --switches-bg-color: #025949;
+    --switches-label-color: #EEEEE1;
+    --switch-bg-color: #EEEEE1;
+    --switch-text-color: #025949 ;
+}
+
+
+/* resize font-size on html and body level. html is required for widths based on rem */
+@media screen and (min-width: 1024px) {
+
+    html,
+    body {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+
+/* container for all of the switch elements 
+    - adjust "width" to fit the content accordingly 
+*/
+.switches-container {
+    width: 13rem;
+    height: 70px;
+    position: relative;
+    display: flex;
+    padding: 0;
+    position: relative;
+    background: var(--switches-bg-color);
+    line-height: 3rem;
+    border-radius: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    color: var(--switches-label-color);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    padding: 0.15rem;
+    z-index: 3;
+    transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+    /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+    border-radius: 3rem;
+    background: var(--switch-bg-color);
+    height: 100%;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    display: block;
+    color: var(--switch-text-color) ;
+    transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+    will-change: opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+    transform: translateX(1%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+    transform: translateX(91%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+    opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+    opacity: 1;
+}
+
+
+
+/* ------------- section 1 --------------*/
+
+.sectionOne{
+    display: flex;
+    justify-content: center;
+
+    width: 1920px;
+    height: 804px;
+}
+
+.sectionOneText{
+    margin-top: 382px;
+    margin-left: 280px;
+}
+
+.sectionOne h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #025949;
+    line-height: 1.2;
+}
+
+.sectionOne .explorebtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 18px;
+    margin: 30px 2px;
+    border-radius: 50px;
+    height: 50px;
+    min-width: 210px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.explorebtn:hover {
+    background-color:#BBD94E;
+    color:#025949;
+    font-weight:400;
+  }
+
+.sectionOne img{
+    margin-top: 200px;
+    width: 740px;
+    height: 570px;
+    
+    padding-right: 100px;
+
+}
+
+
+/* --------------- section 2 --------------*/
+
+
+.sectionTwoTitle{
+
+    width: 1920px;
+    height: 340px;
+}
+
+
+.sectionTwoContent{
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 800px;
+
+    margin-left: 350px;
+    
+}
+
+.sectionTwoContent h2{
+    font-size: 40px;
+    font-weight: bold;
+    color:#025949;
+
+    padding-top: 151px;
+    margin-left: 161px;
+}
+
+.sectionTwoContent h3{
+    font-size: 22px;
+    font-weight: bold;
+    color:#025949;
+
+    margin-top: 50px;
+    margin-left: 161px;
+}
+
+.sectionTwoContent p{
+    font-size: 16px;
+    color:#025949;
+    line-height: 1.6em;
+
+    margin-top: 25px;
+    margin-left: 161px;
+}
+
+.sectionTwoContent .downloadbtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    height: 50px;
+    min-width: 210px;
+    margin-left: 161px; 
+}
+
+.sectionTwoContent .downloadbtn:hover {
+    background-color: #EEEEE1;
+    color:#025949;
+    font-weight:500;
+  }
+
+/* ---------Icon Section--------- */
+
+
+.iconSection{
+    width: 1920px;
+    height: 320px;
+    
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.iconSection ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.iconSection li{
+    text-align: center;
+    margin-right: 150px;
+
+}
+
+.iconSection img{
+    width: 190px;
+    height: 190px;
+
+}
+
+.iconSection h1{
+    font-size: 70px;
+    font-weight: bold;
+    color: #025949;
+    margin-top: 10px;
+}
+
+.iconSection p{
+    margin-top: 5px;
+    font-size: 16px;
+    color:#025949;
+
+}
+
+
+/* ---------Section 3 (Steps)-------- */
+
+.sectionThreeTitle{
+    width: 1920px;
+    height: 340px;
+}
+
+.steps{
+    width: 1920px;
+}
+
+/* --------------Step 1------------- */
+
+.stepOne{
+    background-color: #025949;
+    width: 627px;
+    height: 627px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 500px;
+}
+
+#pic{
+    width: 418px;
+    height: 567px;
+
+    position: absolute;
+    left: 280px;
+    top: 2900px;
+}
+
+#number{
+    position: absolute;
+    left: 530px;
+    top: 2650px;
+}
+
+
+.stepOne h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#BBD94E;
+    text-align: center;
+    
+    padding-top: 100px;
+
+}
+
+.stepOne h2{
+    font-size: 22px;
+    font-weight: bold;
+    color: #BBD94E;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stepOne p{
+    font-size: 16px;
+    color: #BBD94E;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* ---------------------Step 2------------------- */
+
+.stepTwo{
+    background-color:#BBD94E;
+    width: 627px;
+    height: 627px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 1000px;
+    margin-top: -30px;
+}
+
+#pictwo{
+    width: 584px;
+    height: 352px;
+
+    position: absolute;
+    left: 1200px;
+    top: 3750px;
+}
+
+#numbertwo{
+    position: absolute;
+    left: 1520px;
+    top: 3190px;
+
+}
+
+.stepTwo h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#025949;
+    text-align: center;
+    
+    padding-top: 100px;
+}
+
+.stepTwo h2{
+    font-size: 22px;
+    font-weight: bold;
+    color:#025949;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stepTwo p{
+    font-size: 16px;
+    color:#025949;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+/* ---------------------Step 3------------------- */
+
+.stepThree{
+    background-color: #025949;
+    width: 627px;
+    height: 627px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 500px;
+    margin-top: 40px;
+
+}
+
+#picthree {
+    width: 452px;
+    height: 568px;
+
+    position: absolute;
+    left: 1000px;
+    top: 4120px;
+}
+
+#numberthree{
+    position: absolute;
+    left: 540px;
+    top: 3890px;
+}
+
+.stepThree h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#BBD94E;
+    text-align: center;
+    
+    padding-top: 100px;
+}
+
+.stepThree h2{
+    font-size: 22px;
+    font-weight: bold;
+    color: #BBD94E;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stepThree p{
+    font-size: 16px;
+    color: #BBD94E;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* ------------Step 4------------ */
+
+.stepFour{
+    background-color:#BBD94E;
+    width: 627px;
+    height: 627px;
+    border-radius: 50px;
+    line-height: 1em;
+
+    margin-left: 1000px;
+    margin-top: 60px;
+}
+
+#picfour{
+    width: 632px;
+    height: 456px;
+
+    position: absolute;
+    left: 1130px;
+    top: 4950px;
+}
+
+#numberfour{
+    position: absolute;
+    left: 1480px;
+    top: 4560px;
+}
+
+.stepFour h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#025949;
+    text-align: center;
+    line-height: 1.4em;
+    
+    padding-top: 100px;
+}
+
+.stepFour h2{
+    font-size: 22px;
+    font-weight: bold;
+    color:#025949;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stepFour p{
+    font-size: 16px;
+    color:#025949;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+/* ------------Some of our partners (logos)----------- */
+
+.logos{
+    width: 1920px;
+    display:flex;
+    flex-direction: row;
+}
+
+
+#logotitle{
+    text-align: center;
+    color:#025949;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 200px;
+    margin-bottom: 40px;
+
+    width: 1920px;
+
+}
+
+.logos img{
+    margin-right: 24px;
+}
+
+
+
+/* ---------------------Section 4---------------------- */
+
+.sectionFour{
+    width: 1920px;
+    display: column;
+    justify-content: center;
+
+}
+
+#sectionfourtitle{
+    width: 1920px;
+    height: 320px;
+
+}
+
+#sectionfourpic{
+    width: 750px;
+    height: 660px;
+
+    display: block;
+    margin: 0 auto;
+
+}
+
+#sectionfourlink{
+    text-decoration: none;
+}
+
+.findKindFoodbtn{
+    background-color: #025949;
+    border: none;
+    color:#EEEEE1;
+    padding: 10px 40px;
+    text-align: center;
+    font-family: Geologica;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+    border-radius: 50px;
+    height: 50px;
+    min-width: 210px;
+
+    display: block;
+    margin: 0 auto;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.findKindFoodbtn:hover {
+    background-color:#BBD94E;
+    color:#025949;
+    font-weight:400;
+  }
+
+
+
+/* ------------------Footer------------------- */
+
+.footer{
+    background-color: #BBD94E;
+    border-radius: 50px 50px 0px 0px;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 1920px;
+    height: 120px;
+
+    margin-top: 50px;
+    padding-top: 30px;
+
+}
+
+.appstore{
+
+}
+
+.appstore img{
+    margin-top: 30px;
+
+}
+
+.kindfoodlogo img{
+    display: block;
+    margin: 0 auto;
+
+}
+
+.kindfoodlogo p{
+    font-size: 12px;
+    color: #025949;
+    text-align: center;
+
+}
+
+.socialmedia img{
+
+}
+
+
+
+
+
